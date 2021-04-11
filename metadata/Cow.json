@@ -1,0 +1,23 @@
+{
+    "name": "Sumo Cow",
+    "description": "Colossal Cow",
+    "image": "https://ipfs.io/ipfs/QmVJTxa4wBy7EyTP3mnf6LvXbXpCQLRWKqARmHFCJ2Qa9Q?filename=Cow.png",
+    "attributes": [
+        {
+            "trait_type": "Weight",
+            "value": 89
+        },
+        {
+            "trait_type": "Squishiness",
+            "value": 56
+        },
+        {
+            "trait_type": "Hunger",
+            "value": 67
+        },
+        {
+            "trait_type": "Experience",
+            "value": 0
+        }
+    ]
+}

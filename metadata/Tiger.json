@@ -1,0 +1,23 @@
+{
+    "name": "Sumo Tiger",
+    "description": "Tubby Tiger",
+    "image": "https://ipfs.io/ipfs/QmZ7wRkrAqyG1h8hzcnVQ4LQ8C75E3irfFMG2nJk9pmoST?filename=Tiger.png",
+    "attributes": [
+        {
+            "trait_type": "Weight",
+            "value": 50
+        },
+        {
+            "trait_type": "Squishiness",
+            "value": 73
+        },
+        {
+            "trait_type": "Hunger",
+            "value": 27
+        },
+        {
+            "trait_type": "Experience",
+            "value": 0
+        }
+    ]
+}

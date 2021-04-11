@@ -1,0 +1,23 @@
+{
+    "name": "Sumo Bear",
+    "description": "Big Bear",
+    "image": "https://ipfs.io/ipfs/QmaqjS7QEVWgDbQKvST5PhMwf5kxMuqoWyc6q9G2qrKRSA?filename=Bear.png",
+    "attributes": [
+        {
+            "trait_type": "Weight",
+            "value": 98
+        },
+        {
+            "trait_type": "Squishiness",
+            "value": 34
+        },
+        {
+            "trait_type": "Hunger",
+            "value": 75
+        },
+        {
+            "trait_type": "Experience",
+            "value": 0
+        }
+    ]
+}

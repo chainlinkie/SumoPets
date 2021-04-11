@@ -1,4 +1,4 @@
-// contracts/DungeonsAndDragonsCharacter.sol
+// contracts/SumoPets.sol
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.6;
 
@@ -7,7 +7,7 @@ import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
-contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
+contract SumoPets is ERC721, VRFConsumerBase, Ownable {
     using SafeMath for uint256;
     using Strings for string;
 
@@ -20,12 +20,9 @@ contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
     // rinkeby: 0x01BE23585060835E02B77ef475b0Cc51aA1e0709a
 
     struct Character {
-        uint256 strength;
-        uint256 dexterity;
-        uint256 constitution;
-        uint256 intelligence;
-        uint256 wisdom;
-        uint256 charisma;
+        uint256 weight;
+        uint256 squishiness;
+        uint256 hunger;
         uint256 experience;
         string name;
     }
@@ -47,7 +44,7 @@ contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
     constructor(address _VRFCoordinator, address _LinkToken, bytes32 _keyhash)
         public
         VRFConsumerBase(_VRFCoordinator, _LinkToken)
-        ERC721("DungeonsAndDragonsCharacter", "D&D")
+        ERC721("SumoPets", "SUMO")
     {   
         VRFCoordinator = _VRFCoordinator;
         LinkToken = _LinkToken;
@@ -86,22 +83,16 @@ contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
         override
     {
         uint256 newId = characters.length;
-        uint256 strength = (randomNumber % 100);
-        uint256 dexterity = ((randomNumber % 10000) / 100 );
-        uint256 constitution = ((randomNumber % 1000000) / 10000 );
-        uint256 intelligence = ((randomNumber % 100000000) / 1000000 );
-        uint256 wisdom = ((randomNumber % 10000000000) / 100000000 );
-        uint256 charisma = ((randomNumber % 1000000000000) / 10000000000);
+        uint256 weight = (randomNumber % 100);
+        uint256 squishiness = ((randomNumber % 10000) / 100 );
+        uint256 hunger = ((randomNumber % 1000000) / 10000 );
         uint256 experience = 0;
 
         characters.push(
             Character(
-                strength,
-                dexterity,
-                constitution,
-                intelligence,
-                wisdom,
-                charisma,
+                weight,
+                squishiness,
+                hunger,
                 experience,
                 requestToCharacterName[requestId]
             )
@@ -129,7 +120,7 @@ contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
     {
         return (
             characters[tokenId].name,
-            characters[tokenId].strength + characters[tokenId].dexterity + characters[tokenId].constitution + characters[tokenId].intelligence + characters[tokenId].wisdom + characters[tokenId].charisma,
+            characters[tokenId].weight + characters[tokenId].squishiness + characters[tokenId].hunger,
             getLevel(tokenId),
             characters[tokenId].experience
         );
@@ -142,19 +133,13 @@ contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
             uint256,
             uint256,
             uint256,
-            uint256,
-            uint256,
-            uint256,
             uint256
         )
     {
         return (
-            characters[tokenId].strength,
-            characters[tokenId].dexterity,
-            characters[tokenId].constitution,
-            characters[tokenId].intelligence,
-            characters[tokenId].wisdom,
-            characters[tokenId].charisma,
+            characters[tokenId].weight,
+            characters[tokenId].squishiness,
+            characters[tokenId].hunger,
             characters[tokenId].experience
         );
     }

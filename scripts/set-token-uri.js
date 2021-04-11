@@ -1,12 +1,14 @@
-const DungeonsAndDragons = artifacts.require('DungeonsAndDragonsCharacter')
+const SumoPetsApp = artifacts.require('SumoPets')
 const TOKENID = 0
 module.exports = async callback => {
-    const dnd = await DungeonsAndDragons.deployed()
+    const sumo = await SumoPetsApp.deployed()
     console.log('Let\'s set the tokenURI of your characters')
-    const tx = await dnd.setTokenURI(0, "https://ipfs.io/ipfs/QmaSED9ZSbdGts5UZqueFJjrJ4oHH3GnmGJdSDrkzpYqRS?filename=the-chainlink-knight.json")
-    const tx1 = await dnd.setTokenURI(1, "https://ipfs.io/ipfs/QmTvsVaaHTuMNmwXgbfgkrztFEazAPyzmrb4VSS2PbqLjA?filename=the-chainlink-elf.json")
-    const tx2 = await dnd.setTokenURI(2, "https://ipfs.io/ipfs/QmPZQhiBB6pwcxRgwZe2mx6ZizCPYgq8i4FBMETyWK1V2z?filename=the-chainlink-wizard.json")
-    const tx3 = await dnd.setTokenURI(3, "https://ipfs.io/ipfs/QmS6aznzxshLMcECPQZjCR94UF22WHu6FMM5HLQvaYL9NP?filename=the-chainlink-orc.json")
+    const tx = await sumo.setTokenURI(0, "https://ipfs.io/ipfs/QmewwtysuTwzoUBichFFTFAaZi6WkYvSiagpZj5f4wH9g2?filename=Bear.json")
+    const tx1 = await sumo.setTokenURI(1, "https://ipfs.io/ipfs/QmQX4mrKPxTBPKomdK34PxYuepMqr3eTf4NjtFrkeGMFfW?filename=Bunny.json")
+    const tx2 = await sumo.setTokenURI(2, "https://ipfs.io/ipfs/QmXXRRWjJKhNcK8xhmV9SSiBcJEXuAWbxve9duQS5B4K6L?filename=Chicken.json")
+    const tx3 = await sumo.setTokenURI(3, "https://ipfs.io/ipfs/QmcSNX2pZC1tx5hWAwE2J8TGGmy2T8Rt7aUR1xxeysUpTv?filename=Cow.json")
+    const tx4 = await sumo.setTokenURI(4, "https://ipfs.io/ipfs/QmW2GE5fvZPj3YaMVi1yqmGgAC8g6m6Aewb8hzKKJYZKNh?filename=Pig.json")
+    const tx5 = await sumo.setTokenURI(5, "https://ipfs.io/ipfs/Qmcc3DqEoeuZFNcyxMop78Gcq12ZM3MLG32Ua9Y4QyJm6C?filename=Tiger.json")
     console.log(tx)
     callback(tx.tx)
 }

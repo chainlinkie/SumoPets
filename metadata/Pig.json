@@ -1,0 +1,23 @@
+{
+    "name": "Sumo Pig",
+    "description": "Porky Pig",
+    "image": "https://ipfs.io/ipfs/QmZomvdMD333sApDDybjaP13EZ8Bdc1xjGX1RWukhG8ZKn?filename=Pig.png",
+    "attributes": [
+        {
+            "trait_type": "Weight",
+            "value": 51
+        },
+        {
+            "trait_type": "Squishiness",
+            "value": 72
+        },
+        {
+            "trait_type": "Hunger",
+            "value": 64
+        },
+        {
+            "trait_type": "Experience",
+            "value": 0
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Sumo Chicken",
+    "description": "Chunky Chicken",
+    "image": "https://ipfs.io/ipfs/QmYS9P5AxW14Vu6RKXZwCu22ffKbGZKJCSpfZuKYE8wLEy?filename=Chick.png",
+    "attributes": [
+        {
+            "trait_type": "Weight",
+            "value": 32
+        },
+        {
+            "trait_type": "Squishiness",
+            "value": 45
+        },
+        {
+            "trait_type": "Hunger",
+            "value": 89
+        },
+        {
+            "trait_type": "Experience",
+            "value": 0
+        }
+    ]
+}

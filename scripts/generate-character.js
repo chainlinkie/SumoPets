@@ -1,11 +1,13 @@
-const DungeonsAndDragons = artifacts.require('DungeonsAndDragonsCharacter')
+const SumoPetsApp = artifacts.require('SumoPets')
 
 module.exports = async callback => {
-  const dnd = await DungeonsAndDragons.deployed()
-  console.log('Creating requests on contract:', dnd.address)
-  const tx = await dnd.requestNewRandomCharacter(77, "The Chainlink Knight")
-  const tx2 = await dnd.requestNewRandomCharacter(7777777, "The Chainlink Elf")
-  const tx3 = await dnd.requestNewRandomCharacter(7, "The Chainlink Wizard")
-  const tx4 = await dnd.requestNewRandomCharacter(777, "The Chainlink Orc")
+  const sumo = await SumoPetsApp.deployed()
+  console.log('Creating requests on contract:', sumo.address)
+  const tx = await sumo.requestNewRandomCharacter(77, "Sumo Bear")
+  const tx2 = await sumo.requestNewRandomCharacter(7777777, "Sumo Bunny")
+  const tx3 = await sumo.requestNewRandomCharacter(7, "Sumo Chicken")
+  const tx4 = await sumo.requestNewRandomCharacter(777, "Sumo Cow")
+  const tx5 = await sumo.requestNewRandomCharacter(7777, "Sumo Pig")
+  const tx6 = await sumo.requestNewRandomCharacter(77777, "Sumo Tiger")
   callback(tx.tx)
 }
