@@ -1,9 +1,16 @@
 # Sumo Pets NFT
+For my project I am using the Chainlink VRF in order to generate verifiably random stats for my NFTs.
 
 ## View and purchase our NFTs at 
 https://oneclickdapp.com/tape-null
 
-## Here are some of our NFTs
+## OpenSea
+https://testnets.opensea.io/collection/sumopets
+
+## Etherscan
+https://rinkeby.etherscan.io/address/0xefb89ac07f97b1285cf4543fe17ff918d7aedf1c
+
+## Here are some of my NFTs
 
 ![Bear](https://ipfs.io/ipfs/QmaqjS7QEVWgDbQKvST5PhMwf5kxMuqoWyc6q9G2qrKRSA?filename=Bear.png)
 
